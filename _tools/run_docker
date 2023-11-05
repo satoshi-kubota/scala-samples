@@ -1,0 +1,10 @@
+#!/bin/sh
+docker run \
+    --name scala_samples \
+    --user scala-user \
+    -it \
+    --rm \
+    -v /workspace/projects/scala-samples:/work \
+    -w /work \
+    dev-scala:1 \
+    bash
