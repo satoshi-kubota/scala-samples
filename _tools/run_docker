@@ -5,6 +5,7 @@ docker run \
     -it \
     --rm \
     -v /workspace/projects/scala-samples:/work \
+    -e COURSIER_CACHE=/work/.coursier_cache \
     -w /work \
     dev-scala:1 \
     bash

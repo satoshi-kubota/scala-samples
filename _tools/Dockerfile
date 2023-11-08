@@ -34,8 +34,8 @@ RUN curl -fL "https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linu
     && chmod +x cs \
     && mv cs /usr/local/bin/cs 
 
+USER scala-user
 RUN cs install ammonite
 
-USER scala-user
-
+ENV PATH="$PATH:/home/scala-user/.local/share/coursier/bin"
 CMD ["bash"]
